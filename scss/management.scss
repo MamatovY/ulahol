@@ -1,0 +1,40 @@
+@import './mixin.scss';
+
+.management {
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        @include adaptive-value('gap', 40, 20, 3);
+    }
+
+    &__item {
+        text-align: center;
+        @include adaptive-value('width', 255, 200, 3);
+    }
+
+    &__img img {
+        @include adaptive-value('height', 325, 275, 3);
+        object-fit: cover;
+    }
+
+    &__name {
+        margin: 10px 0;
+        padding: 0 5px;
+        color: $color1;
+        font-weight: 500;
+    }
+
+    &__position {
+        color: #333;
+    }
+}
+
+@media (max-width:492px) {
+    .management {
+        &__img img {
+            height: auto;
+        }
+    }
+}

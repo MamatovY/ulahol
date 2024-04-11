@@ -1,0 +1,14 @@
+<svg width="50.000000" height="50.000000" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<desc>
+			Created with Pixso.
+	</desc>
+	<defs>
+		<clipPath id="clip3_839">
+			<rect id="icons8-file 1" width="50.000000" height="50.000000" transform="translate(-0.666992 0.000000)" fill="white" fill-opacity="0"/>
+		</clipPath>
+	</defs>
+	<rect id="icons8-file 1" width="50.000000" height="50.000000" transform="translate(-0.666992 0.000000)" fill="#FFFFFF" fill-opacity="0"/>
+	<g clip-path="url(#clip3_839)">
+		<path id="Vector" d="M29.73 2L6.33 2L6.33 48L42.33 48L42.33 14.6L29.73 2ZM29.33 15L29.33 4.39L39.93 15L29.33 15Z" fill="#FFFFFF" fill-opacity="1.000000" fill-rule="nonzero"/>
+	</g>
+</svg>

@@ -1,0 +1,36 @@
+.management__items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
+  gap: calc(20px + 20 * (100vw - 425px) / 1075);
+}
+.management__item {
+  text-align: center;
+  width: calc(200px + 55 * (100vw - 425px) / 1075);
+}
+.management__img img {
+  height: calc(275px + 50 * (100vw - 425px) / 1075);
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.management__name {
+  margin: 10px 0;
+  padding: 0 5px;
+  color: #112B60;
+  font-weight: 500;
+}
+.management__position {
+  color: #333;
+}
+
+@media (max-width: 492px) {
+  .management__img img {
+    height: auto;
+  }
+}/*# sourceMappingURL=management.css.map */
