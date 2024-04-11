@@ -12,8 +12,25 @@ body {
     font-family: 'Roboto', sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 16px;
     color: #000;
+    font-size: 16px;
+
+    @media (max-width:1024px) {
+        font-size: 14px;
+    }
+
+    @media (max-width:768px) {
+        font-size: 12px;
+    }
+
+    @media (max-width:480px) {
+        font-size: 10px;
+    }
+
+    @media (max-width:375px) {
+        font-size: 8px;
+    }
+
 }
 
 
@@ -27,6 +44,30 @@ h4 {
 
 h1 {
     font-size: 36px;
+
+    @media (max-width:1024px) {
+        font-size: 30px;
+    }
+
+    @media (max-width:900px) {
+        font-size: 26px;
+    }
+
+    @media (max-width:768px) {
+        font-size: 24px;
+    }
+
+    @media (max-width:600px) {
+        font-size: 20px;
+    }
+
+    @media (max-width:425px) {
+        font-size: 18px;
+    }
+
+    @media (max-width:375px) {
+        font-size: 16px;
+    }
 }
 
 h2 {
@@ -75,11 +116,6 @@ area {
     padding: 0 1rem;
 }
 
-@media (min-width: 1024px) {
-    .container {
-        max-width: 1024px;
-    }
-}
 
 @media (min-width: 1280px) {
     .container {
@@ -132,6 +168,19 @@ area {
     &__visually {
         gap: 10px;
     }
+
+    @media (max-width:1024) {
+        font-size: 12px;
+    }
+
+
+    @media (max-width:480px) {
+        &__visually {
+            span {
+                display: none;
+            }
+        }
+    }
 }
 
 
@@ -140,9 +189,9 @@ area {
     padding-bottom: 20px;
     display: flex;
     justify-content: space-between;
-}
+    flex-wrap: wrap;
+    gap: 10px;
 
-.header {
     &__logo {
         font-weight: 700;
         display: flex;
@@ -162,6 +211,8 @@ area {
 
     &__right {
         display: flex;
+        flex-wrap: wrap;
+
         align-items: center;
         gap: 40px;
     }
@@ -188,7 +239,6 @@ area {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
     }
 
     &__input {
@@ -201,6 +251,48 @@ area {
     }
 
 
+    @media (max-width:1024px) {
+        &__search {
+            padding: 8px 7px;
+        }
+
+        &__input {
+            min-width: auto;
+            font-size: 10px;
+        }
+
+        &__right {
+            gap: 10px;
+        }
+    }
+
+    @media (max-width:700px) {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        &__submit {
+            margin-left: 0;
+        }
+
+        &__right {
+            justify-content: space-between;
+        }
+
+        &__input {
+            font-size: 12px;
+        }
+
+        &__search {
+            margin-left: 0;
+        }
+    }
+
+    @media (max-width:425px) {
+        &__right {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+    }
 }
 
 
@@ -220,6 +312,7 @@ nav {
 
     &__ul {
         display: flex;
+        flex-wrap: wrap;
         list-style: none;
         gap: 50px;
     }
