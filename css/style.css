@@ -282,6 +282,9 @@ area {
     display: grid;
     grid-template-columns: 1fr;
   }
+  .header__logo {
+    font-size: 14px;
+  }
   .header__submit {
     margin-left: 0;
   }

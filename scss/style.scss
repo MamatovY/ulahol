@@ -270,6 +270,10 @@ area {
         display: grid;
         grid-template-columns: 1fr;
 
+        &__logo {
+            font-size: 14px;
+        }
+
         &__submit {
             margin-left: 0;
         }
