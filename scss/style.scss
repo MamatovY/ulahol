@@ -27,9 +27,6 @@ body {
         font-size: 10px;
     }
 
-    @media (max-width:375px) {
-        font-size: 8px;
-    }
 
 }
 
@@ -72,12 +69,28 @@ h1 {
 
 h2 {
     font-size: 32px;
+
+    @media (max-width:1024px) {
+        font-size: 28px;
+    }
+
+    @media (max-width:768px) {
+        font-size: 24px;
+    }
+
+    @media (max-width:500px) {
+        font-size: 22px;
+    }
 }
 
 h3 {}
 
 h4 {
     font-size: 18px;
+
+    @media (max-width:768px) {
+        font-size: 14px;
+    }
 }
 
 h5 {}
@@ -380,6 +393,13 @@ area {
 
     &__logo {
         margin-top: 40px;
+        display: none;
+    }
+
+    @media(max-width:1024px) {
+        &__ul {
+            gap: 10px;
+        }
     }
 
 
@@ -394,6 +414,7 @@ area {
         top: -100%;
         overflow: auto;
         opacity: 0;
+        z-index: 10;
 
         .cross {
             display: block;
@@ -402,6 +423,11 @@ area {
         &.show {
             opacity: 1;
             top: 0;
+        }
+
+        &__logo {
+            display: flex;
+            color: #FFF;
         }
 
         &__ul {
@@ -596,6 +622,7 @@ area {
         border-top: 1px solid #FFF;
         padding-top: 20px;
         display: flex;
+        flex-wrap: wrap;
         justify-content: space-between;
         gap: 30px;
     }
@@ -604,6 +631,10 @@ area {
         margin-bottom: 10px;
         display: block;
 
+        svg {
+            width: 17px;
+            height: 17px;
+        }
     }
 
     a.footer__item {
@@ -628,5 +659,18 @@ area {
         text-align: center;
         color: rgba($color: #FFF, $alpha: 0.52);
         font-weight: 500;
+    }
+
+
+    @media (max-width:1024px) {
+        &__copyright {
+            font-size: 12px;
+        }
+    }
+
+    @media (max-width:768px) {
+        &__copyright {
+            font-size: 10px;
+        }
     }
 }

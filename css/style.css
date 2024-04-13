@@ -29,11 +29,6 @@ body {
     font-size: 10px;
   }
 }
-@media (max-width: 375px) {
-  body {
-    font-size: 8px;
-  }
-}
 
 h1,
 h2,
@@ -80,9 +75,29 @@ h1 {
 h2 {
   font-size: 32px;
 }
+@media (max-width: 1024px) {
+  h2 {
+    font-size: 28px;
+  }
+}
+@media (max-width: 768px) {
+  h2 {
+    font-size: 24px;
+  }
+}
+@media (max-width: 500px) {
+  h2 {
+    font-size: 22px;
+  }
+}
 
 h4 {
   font-size: 18px;
+}
+@media (max-width: 768px) {
+  h4 {
+    font-size: 14px;
+  }
 }
 
 a {
@@ -366,6 +381,12 @@ area {
 }
 .nav__logo {
   margin-top: 40px;
+  display: none;
+}
+@media (max-width: 1024px) {
+  .nav__ul {
+    gap: 10px;
+  }
 }
 @media (max-width: 768px) {
   .nav {
@@ -377,6 +398,7 @@ area {
     top: -100%;
     overflow: auto;
     opacity: 0;
+    z-index: 10;
   }
   .nav .cross {
     display: block;
@@ -384,6 +406,12 @@ area {
   .nav.show {
     opacity: 1;
     top: 0;
+  }
+  .nav__logo {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #FFF;
   }
   .nav__ul {
     display: block;
@@ -549,6 +577,8 @@ area {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -557,6 +587,10 @@ area {
 .footer__item {
   margin-bottom: 10px;
   display: block;
+}
+.footer__item svg {
+  width: 17px;
+  height: 17px;
 }
 .footer a.footer__item {
   display: -webkit-box;
@@ -576,4 +610,14 @@ area {
   text-align: center;
   color: rgba(255, 255, 255, 0.52);
   font-weight: 500;
+}
+@media (max-width: 1024px) {
+  .footer__copyright {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .footer__copyright {
+    font-size: 10px;
+  }
 }/*# sourceMappingURL=style.css.map */
