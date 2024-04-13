@@ -92,14 +92,15 @@ img {
     width: 100%;
 }
 
-input,
-button {
+input {
     outline: none;
     border: none;
     background: none;
 }
 
 button {
+    border: none;
+    background: none;
     cursor: pointer;
 }
 
@@ -138,17 +139,41 @@ area {
     gap: 5px;
 }
 
+.logo {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    img {
+        width: 46px;
+        height: 46px;
+    }
+
+    span {
+        max-width: 70%;
+    }
+}
+
 
 .top {
     background: $color1;
     padding-top: 4px;
     padding-bottom: 4px;
     font-size: 14px;
+    position: relative;
+    z-index: 20;
 
     &__container {
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+
+    &__right {
+        display: flex;
+        align-items: center;
+        gap: 10px;
 
     }
 
@@ -169,8 +194,49 @@ area {
         gap: 10px;
     }
 
+    .burger {
+        display: none;
+        color: #FFF;
+
+        svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        &__menu {
+            display: block;
+        }
+
+        &__cross {
+            display: none;
+        }
+
+        &.show {
+            .burger {
+                &__menu {
+                    display: none;
+                }
+
+                &__cross {
+                    display: block;
+                }
+            }
+        }
+    }
+
+
+
+
+
     @media (max-width:1024) {
         font-size: 12px;
+    }
+
+    @media (max-width:768px) {
+        .burger {
+            display: block;
+        }
+
     }
 
 
@@ -184,6 +250,8 @@ area {
 }
 
 
+
+
 .header {
     padding-top: 15px;
     padding-bottom: 20px;
@@ -193,21 +261,9 @@ area {
     gap: 10px;
 
     &__logo {
-        font-weight: 700;
-        display: flex;
-        align-items: center;
-        gap: 10px;
         color: #000;
-
-        img {
-            width: 46px;
-            height: 46px;
-        }
-
-        span {
-            max-width: 70%;
-        }
     }
+
 
     &__right {
         display: flex;
@@ -312,6 +368,7 @@ area {
     padding: 17px 0;
     gap: 50px;
     font-size: 16px;
+    transition: all 0.5s ease;
 
     &__ul {
         display: flex;
@@ -320,13 +377,32 @@ area {
         gap: 50px;
     }
 
+
+    &__logo {
+        margin-top: 40px;
+    }
+
+
+
+
     @media (max-width:768px) {
+        display: block;
         position: fixed;
         width: 100%;
         height: 100%;
         left: 0;
-        top: 0;
+        top: -100%;
         overflow: auto;
+        opacity: 0;
+
+        .cross {
+            display: block;
+        }
+
+        &.show {
+            opacity: 1;
+            top: 0;
+        }
 
         &__ul {
             display: block;

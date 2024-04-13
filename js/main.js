@@ -1,3 +1,7 @@
+$('.burger').click(function () {
+    $('.nav').toggleClass('show');
+    $('.burger').toggleClass('show');
+});
 
 $('.banner').slick({
     dots: true,
@@ -161,12 +165,10 @@ dropdownTitles.forEach(title => {
         }
     });
 });
-
-
 document.addEventListener('click', event => {
-    const dropdownTitles = document.querySelectorAll('.dropdown');
-    const isClickInsideDropdownTitle = Array.from(dropdownTitles).some(title => title.contains(event.target));
-    if (!isClickInsideDropdownTitle) {
+    const dropdowns = document.querySelectorAll('.dropdown');
+    const isClickInsideDropdown = Array.from(dropdowns).some(dropdown => dropdown.contains(event.target));
+    if (!isClickInsideDropdown) {
         const dropdownMenus = document.querySelectorAll('.dropdown ul');
         dropdownMenus.forEach(menu => {
             menu.classList.remove('show');
