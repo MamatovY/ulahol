@@ -14,7 +14,11 @@
         color: $color1;
 
         a {
-            color: $color1;
+            background: $color1;
+            color: #fff;
+            border-radius: 4px;
+            padding: 10px;
+            display: inline-block;
         }
 
         ul li ul {

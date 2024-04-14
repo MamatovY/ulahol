@@ -11,7 +11,11 @@
   color: #112B60;
 }
 .sitemap__main a {
-  color: #112B60;
+  background: #112B60;
+  color: #fff;
+  border-radius: 4px;
+  padding: 10px;
+  display: inline-block;
 }
 .sitemap__main ul li ul {
   margin-left: 10px;
