@@ -1,8 +1,13 @@
 .about {
-  font-size: 20px;
+  font-size: 24px;
 }
 .about__text {
   margin-bottom: 10px;
+}
+@media (max-width: 1024px) {
+  .about {
+    font-size: 20px;
+  }
 }
 
 .gallery .thumbnails {
