@@ -154,17 +154,77 @@ function copyToClipboard(text) {
 }
 
 
-const dropdownTitles = document.querySelectorAll('.dropdown-title');
-dropdownTitles.forEach(title => {
-    title.addEventListener('click', () => {
-        const ul = title.nextElementSibling;
-        if (ul.classList.contains('show')) {
-            ul.classList.remove('show');
-        } else {
-            ul.classList.add('show');
-        }
+
+
+
+
+
+const dropdowns = document.querySelectorAll('.dropdown');
+
+function handleMouseEnter(event) {
+    console.log('mouse enter');
+    const ul = event.target.querySelector('ul'); // Находим первый ul внутри .dropdown
+    if (ul) {
+        ul.classList.add('show'); // Добавляем класс show
+    }
+}
+
+function handleMouseLeave(event) {
+    console.log('mouse leave');
+    const ul = event.target.querySelector('ul'); // Находим первый ul внутри .dropdown
+    if (ul) {
+        ul.classList.remove('show'); // Удаляем класс show
+    }
+
+}
+
+
+function addMouse() {
+    console.log('add mouse');
+    dropdowns.forEach(dropdown => {
+        dropdown.addEventListener('mouseenter', handleMouseEnter);
+        dropdown.addEventListener('mouseleave', handleMouseLeave);
     });
-});
+
+}
+
+
+
+function removeMouse() {
+    console.log('remove mouse');
+    dropdowns.forEach(dropdown => {
+        dropdown.removeEventListener('mouseenter', handleMouseEnter);
+        dropdown.removeEventListener('mouseleave', handleMouseLeave);
+    });
+}
+
+
+const dropdownTitles = document.querySelectorAll('.dropdown-title');
+
+function handleClickOnTitle(event) {
+    console.log('handle click');
+    const ul = event.target.nextElementSibling; // Получаем следующий элемент после .dropdown-title
+    console.log(ul);
+    if (ul.classList.contains('show')) {
+        ul.classList.remove('show'); // Удаляем класс show, если он уже есть
+    } else {
+        ul.classList.add('show'); // Добавляем класс show, если его нет
+    }
+}
+function addClick() {
+    console.log('add click');
+    dropdownTitles.forEach(title => {
+        title.addEventListener('click', handleClickOnTitle)
+    });
+}
+
+function removeClick() {
+    console.log('remove click');
+    dropdownTitles.forEach(title => {
+        title.removeEventListener('click', handleClickOnTitle);
+    });
+}
+
 document.addEventListener('click', event => {
     const dropdowns = document.querySelectorAll('.dropdown');
     const isClickInsideDropdown = Array.from(dropdowns).some(dropdown => dropdown.contains(event.target));
@@ -173,5 +233,29 @@ document.addEventListener('click', event => {
         dropdownMenus.forEach(menu => {
             menu.classList.remove('show');
         });
+
     }
+
+});
+
+
+
+
+
+function handleWindowSize() {
+    if (window.innerWidth >= 768) {
+        addMouse();
+        removeClick()
+    } else {
+        addClick();
+        removeMouse()
+    }
+}
+
+window.addEventListener('load', () => {
+    handleWindowSize();
+});
+
+window.addEventListener('resize', () => {
+    handleWindowSize();
 });

@@ -576,6 +576,7 @@ area {
   background: #112B60;
   padding: 30px 0;
   color: #FFF;
+  clear: left;
 }
 .footer__logo {
   font-weight: 700;
