@@ -9,7 +9,7 @@
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Inter', sans-serif;
     font-weight: 400;
     font-style: normal;
     color: #000;
@@ -35,7 +35,7 @@ h1,
 h2,
 h3,
 h4 {
-    font-family: 'Roboto';
+    font-family: 'Roboto', sans-serif;
     font-weight: 700;
 }
 
@@ -146,6 +146,24 @@ area {
     }
 }
 
+
+
+.pagination {
+    margin-top: 50px;
+    text-align: center;
+    font-weight: 600;
+    color: #000;
+
+    a {
+        color: #898989;
+    }
+
+    a:hover {
+        color: #000;
+        text-decoration: underline;
+    }
+
+}
 
 .container {
     width: 100%;
@@ -607,14 +625,7 @@ area {
     }
 }
 
-.pagination {
-    margin-top: 50px;
-    text-align: center;
 
-    a {
-        color: $color1;
-    }
-}
 
 
 .footer {
