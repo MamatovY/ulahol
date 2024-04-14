@@ -9,17 +9,18 @@
         align-items: center;
         text-align: center;
         gap: 5px;
-        border-bottom: 1px solid rgba($color: $color1, $alpha: 0.5);
-        color: #333;
+        border-bottom: 1px solid rgba($color: #B6B8BC, $alpha: 0.5);
+        color: #959595;
         font-weight: 400;
+        font-family: 'Inter', sans-serif;
         @include adaptive-value('font-size', 18, 9, 3);
         @include adaptive-value('padding-top', 10, 5, 3);
         @include adaptive-value('padding-bottom', 10, 5, 3);
 
 
         &.first {
-            color: $color1;
-            background: #E9EFFF;
+            color: #000;
+            font-weight: 700;
         }
 
         .name {

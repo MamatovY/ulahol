@@ -138,12 +138,14 @@ area {
 .breadcrumb {
   margin-top: 20px;
   margin-bottom: 50px;
+  font-family: "Inter", sans-serif;
 }
 .breadcrumb a {
-  color: #112B60;
+  color: #000;
+  font-weight: 700;
 }
 .breadcrumb .active {
-  font-weight: 700;
+  color: #112B60;
 }
 
 @media (max-width: 500px) {

@@ -9,16 +9,17 @@
           align-items: center;
   text-align: center;
   gap: 5px;
-  border-bottom: 1px solid rgba(17, 43, 96, 0.5);
-  color: #333;
+  border-bottom: 1px solid rgba(182, 184, 188, 0.5);
+  color: #959595;
   font-weight: 400;
+  font-family: "Inter", sans-serif;
   font-size: calc(9px + 9 * (100vw - 425px) / 1075);
   padding-top: calc(5px + 5 * (100vw - 425px) / 1075);
   padding-bottom: calc(5px + 5 * (100vw - 425px) / 1075);
 }
 .documents__grid.first {
-  color: #112B60;
-  background: #E9EFFF;
+  color: #000;
+  font-weight: 700;
 }
 .documents__grid .name {
   color: #112B60;
