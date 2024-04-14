@@ -1,6 +1,8 @@
 @import 'mixin.scss';
 
 .documentsMore {
+    text-align: center;
+
     &__main {
         display: flex;
         justify-content: space-between;
@@ -8,6 +10,11 @@
         flex-wrap: wrap;
         row-gap: 20px;
         column-gap: 10px;
+        color: #000;
+
+        a {
+            color: #000;
+        }
     }
 
     &__fields {
@@ -29,10 +36,14 @@
         position: relative;
         margin-right: 10px;
 
+
         svg {
+            background-color: #E9EFFF;
+            padding: 5px;
+            border-radius: 4px;
             cursor: pointer;
-            width: 1.5em;
-            height: 1.5em;
+            width: 2em;
+            height: 2em;
         }
 
         &:hover {
@@ -45,11 +56,12 @@
         background: #343434;
         color: #FFF;
         position: absolute;
-        top: -130%;
+        top: -40px;
         right: 0;
         padding: 5px;
         border-radius: 3px;
         font-weight: 400;
+        z-index: 2;
 
         &.active {
             display: block;
@@ -57,9 +69,11 @@
     }
 
     &__iframe {
+        text-align: center;
         margin-top: 20px;
         width: 100%;
-        @include adaptive-value('height', 1000, 400, 1);
+        max-width: 1000px;
+        @include adaptive-value('height', 700, 400, 1);
     }
 
 
