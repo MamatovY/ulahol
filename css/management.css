@@ -11,19 +11,29 @@
   gap: calc(20px + 20 * (100vw - 425px) / 1075);
 }
 .management__item {
+  -webkit-box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 14px 0px rgba(0, 0, 0, 0.25);
+  background: rgb(255, 255, 255);
   text-align: center;
   width: calc(200px + 55 * (100vw - 425px) / 1075);
 }
+.management__img {
+  overflow: hidden;
+  height: calc(200px + 80 * (100vw - 425px) / 1075);
+}
 .management__img img {
-  height: calc(275px + 50 * (100vw - 425px) / 1075);
+  height: 110%;
+  border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  top: -5%;
 }
 .management__name {
   margin: 10px 0;
   padding: 0 5px;
-  color: #112B60;
-  font-weight: 500;
+  color: #1978BE;
+  font-weight: 700;
 }
 .management__position {
   color: #333;
